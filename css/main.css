@@ -107,27 +107,53 @@ body {
   padding: 2em;
   font-size: 1.25em;
   height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 1200px;
+}
+
+.header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+  background: peachpuff;
+  font-family: 'Montserrat';
+  color: #003434;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.header span{
+  font-family: 'Bad Script';
+  font-weight: 700;
 }
 
 .wrapper {
   /*add display:flex and set justify-content to space-between*/
-  font-weight: 700;
+  font-weight: 500;
   display: flex;
   justify-content: space-between;
+  flex-flow: row wrap;
 }
 
 .div-1, .div-2, .div-3 {
   /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
-  color: #fff;
+  color: white;
   line-height: 1.7em;
   font-size: 1.3em;
-  background-color: teal;
+  background-color: #004d4d;
   padding: 0 10px;
-  height: 300px;
-  width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .wrapper span {
@@ -136,6 +162,26 @@ body {
   font-weight: lighter;
 }
 
+footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+  background: #003434;
+  padding: 5px;
+  margin: 20px 0 20px 0;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  width: 25%;
+  justify-content: space-around;
+  align-items: stretch;
+  margin-left: 20px;
+  padding: 10px;
+}
 
 
 
@@ -231,6 +277,11 @@ body {
    Inlined to avoid the additional HTTP request:
    http://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
+   @media (min-width: 1200px) {
+      .div-1, .div-2, .div-3 {
+         flex-basis: 30%;
+       }
+
 
 @media print {
     *,
